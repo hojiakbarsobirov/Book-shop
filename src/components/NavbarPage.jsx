@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const NavbarPage = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -20,11 +21,12 @@ const NavbarPage = () => {
 
             <div className={`${isOpen ? 'flex' : 'hidden'} flex-col md:flex md:flex-row md:items-center md:space-x-6 mt-4 md:mt-0 text-white font-medium text-sm`}>
                 <ul className='flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0'>
-                    <li>All Books</li>
+                    <li><Link to={'/'}>All Books</Link></li>
                     <li>Trand Books</li>
                     <li>Old Books</li>
                     <li>Historical Books</li>
                     <li>Expensive Books</li>
+                    <li><Link to={'/post'}>Post Data</Link></li>
                 </ul>
 
                 <div className='mt-3 md:mt-0 md:ml-4'>
