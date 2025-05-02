@@ -17,7 +17,7 @@ const PostData = () => {
         }
 
         try {
-            const response = await AxiosInstance.post('trend-books', newData)
+            const response = await AxiosInstance.post('shop-books', newData)
         } catch(err) {
             alert('Error !')
         }

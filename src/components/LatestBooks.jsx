@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AxiosInstance from '../AxiosInstance'
 
-const TrendBooksPage = () => {
+const LatestBooks = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -10,20 +10,20 @@ const TrendBooksPage = () => {
 
     const fetchData = async () => {
         try {
-            const response = await AxiosInstance.get('trend-books')
+            const response = await AxiosInstance.get('shop-books')
             setData(response.data)
         } catch (err) {
-            alert("Error !")
+            alert('Error !')
         }
     }
 
     return (
         <>
-            <div className='w-full h-auto py-4'>
-                <h2 className='font-bold text-xl text-gray-500 pl-5'>Trend Books</h2>
+            <div className='mt-10 w-full h-auto py-4'>
+                <h2 className='font-bold text-gray-500 text-xl pl-6'>Latest Books</h2>
             </div>
 
-            <section className='w-full mt-5 px-4'>
+            <section className='w-full mt-5 mb-5 px-4'>
                 <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5'>
                     {data.map((item, index) => (
                         <div
@@ -47,4 +47,4 @@ const TrendBooksPage = () => {
     )
 }
 
-export default TrendBooksPage
+export default LatestBooks
