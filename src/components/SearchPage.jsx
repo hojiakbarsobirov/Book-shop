@@ -11,7 +11,7 @@ const SearchPage = () => {
                 className='pl-4 w-full sm:w-[70%] h-12 rounded-md focus:outline-none' 
                 type="text" 
                 placeholder='Search Books' 
-              />
+              />  
               <button 
                 type='submit' 
                 className='w-full sm:w-auto bg-blue-500 hover:bg-blue-600 transition text-white font-medium h-12 px-6 rounded-md'

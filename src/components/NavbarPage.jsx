@@ -26,7 +26,7 @@ const NavbarPage = () => {
                     <li>Old Books</li>
                     <li>Historical Books</li>
                     <li>Expensive Books</li>
-                    <li><Link to={'/post'}>Post Data</Link></li>
+                    {/* <li><Link to={'/post'}>Post Data</Link></li> */}
                 </ul>
 
                 <div className='mt-3 md:mt-0 md:ml-4'>
